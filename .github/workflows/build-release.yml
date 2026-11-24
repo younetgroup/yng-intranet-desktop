@@ -1,6 +1,6 @@
 name: Build Windows and Linux release
 
-# Builds YouNet Intranet Desktop for Windows and Linux from the private source repo at a
+# Builds YouNet Portal Desktop for Windows and Linux from the private source repo at a
 # desktop-v* tag and creates a DRAFT release here. A maintainer reviews it, adds the signed
 # and notarized macOS files (built locally, see the source repo's app-desktop/docs/RELEASING.md)
 # and publishes it.
@@ -238,8 +238,8 @@ jobs:
           elif [[ "$existing" == "true" ]]; then
             gh release upload "$tag" -R "$REPO" --clobber "${files[@]}"
           else
-            notes="YouNet Intranet Desktop ${VERSION} (source ${SOURCE_SHA:0:7}). Windows installers are not code-signed yet: SmartScreen shows \"More info\" > \"Run anyway\". Verify downloads with SHA256SUMS.txt."
+            notes="YouNet Portal Desktop ${VERSION} (source ${SOURCE_SHA:0:7}). Windows installers are not code-signed yet: SmartScreen shows \"More info\" > \"Run anyway\". Verify downloads with SHA256SUMS.txt."
             gh release create "$tag" -R "$REPO" --draft --target main \
-              --title "YouNet Intranet Desktop ${VERSION}" --notes "$notes" "${files[@]}"
+              --title "YouNet Portal Desktop ${VERSION}" --notes "$notes" "${files[@]}"
           fi
           echo "Draft ready: https://github.com/${REPO}/releases (add macOS files, then publish)"
