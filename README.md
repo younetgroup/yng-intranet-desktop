@@ -1,6 +1,6 @@
-# YouNet Intranet Desktop
+# YouNet Portal Desktop
 
-Public distribution for the **YouNet Intranet** desktop app — a native (Electron) client for the Bitrix24 messenger. The application source code is maintained privately; this repository hosts the downloadable builds only.
+Public distribution for the **YouNet Portal** desktop app — a native (Electron) client for the Bitrix24 messenger. The application source code is maintained privately; this repository hosts the downloadable builds only.
 
 ## Download
 
