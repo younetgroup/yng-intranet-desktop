@@ -214,6 +214,7 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: write
+      actions: read  # download the release-bundle artifact
     steps:
       - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
